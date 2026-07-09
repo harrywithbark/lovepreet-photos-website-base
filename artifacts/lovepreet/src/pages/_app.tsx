@@ -6,7 +6,7 @@ import { Nav } from '@/components/layout/Nav';
 import { Footer } from '@/components/layout/Footer';
 import { InquiryDrawer } from '@/components/InquiryDrawer';
 import { StickyMobileCTA } from '@/components/home/StickyMobileCTA';
-import '@/globals.css';
+import '@/index.css';
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
