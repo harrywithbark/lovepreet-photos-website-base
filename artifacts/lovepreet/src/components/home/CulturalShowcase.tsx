@@ -83,12 +83,13 @@ export function CulturalShowcase() {
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 className="absolute inset-0"
               >
-                <img
-                  src={ceremony.img === 'placeholder' ? '' : ceremony.img}
-                  alt={ceremony.title}
-                  className="absolute inset-0 h-full w-full object-cover"
-                  style={{ display: ceremony.img === 'placeholder' ? 'none' : 'block' }}
-                />
+                {ceremony.img !== 'placeholder' && (
+                  <img
+                    src={ceremony.img}
+                    alt={ceremony.title}
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                )}
                 {ceremony.img === 'placeholder' && (
                   <div className="absolute inset-0 flex items-center justify-center" style={{ backgroundColor: 'var(--linen)' }}>
                     <span className="font-display text-2xl italic" style={{ color: 'rgba(31,29,26,0.3)' }}>
