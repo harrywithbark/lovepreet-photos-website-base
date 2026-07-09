@@ -1,3 +1,4 @@
+import type { NextPage } from 'next';
 import { Hero } from '@/components/home/Hero'
 import { DualMedium } from '@/components/home/DualMedium'
 import { SynergySection } from '@/components/home/SynergySection'
@@ -12,9 +13,9 @@ import { FaqAccordion } from '@/components/home/FaqAccordion'
 import { CTABanner } from '@/components/home/CTABanner'
 import { IntakeForm } from '@/components/home/IntakeForm'
 
-export default function Home() {
+const Home: NextPage = () => {
   return (
-    <main>
+    <>
       <Hero />
       <DualMedium />
       <SynergySection />
@@ -28,6 +29,8 @@ export default function Home() {
       <FaqAccordion />
       <CTABanner />
       <IntakeForm />
-    </main>
+    </>
   )
 }
+
+export default Home;
